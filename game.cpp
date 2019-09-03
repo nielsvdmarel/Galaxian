@@ -1,9 +1,5 @@
 #include "game.h"
 
-#include "surface.h"
-#include <iostream>
-#include <cstdio> //printf
-
 namespace Tmpl8
 {
 	// -----------------------------------------------------------
@@ -12,8 +8,8 @@ namespace Tmpl8
 	void Game::Init()
 	{
 		playerMovement = 4;
-		xpos = 375;
-		ypos = 450;
+		xpos = screen->GetWidth()/2;
+		ypos = screen->GetHeight()/5 * 4.5;
 	}
 	
 	// -----------------------------------------------------------
@@ -23,8 +19,10 @@ namespace Tmpl8
 	{
 
 	}
+	static Sprite Background(new Surface("assets/galaxian_assets/BackGroundSheet.png"), 15);
+	static Sprite Player(new Surface("assets/galaxian_assets/shooter.png"), 1);
+	Sprite life1(new Surface("assets/galaxian_assets/shooter.png"), 1);
 
-	static Sprite rotatingGun(new Surface("assets/galaxian_assets/shooter.png"), 1);
 	static int frame = 0;
 
 	// -----------------------------------------------------------
@@ -38,10 +36,27 @@ namespace Tmpl8
 		//screen->Print("hello world", 2, 2, 0xffffff);
 		// print something to the text window
 		//printf("this goes to the console window.\n");
-		// draw a sprite
-		rotatingGun.SetFrame(frame);
-		rotatingGun.Draw(screen, xpos, ypos);
+		Draw();
+		Animate();
 	}
+
+	void Game::Draw() {
+		Background.Draw(screen, 0,0); //TODO replace with normal width and height value
+		Player.Draw(screen, (xpos - Player.GetWidth() / 2), (ypos - Player.GetHeight() / 2)); //TODO replace with normal width and height value
+		for (unsigned int i = 0; i < allSprites.size(); i++) {
+			//draw all objects
+		}
+	}
+
+	void Game::Animate() {
+		Player.SetFrame(0);
+		Background.SetFrame(frame++);
+		if (frame > 14) {
+			frame = 0;
+		}
+		
+	}
+
 	void Game::KeyUp(int i) {
 
 	}

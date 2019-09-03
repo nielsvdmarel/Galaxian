@@ -5,8 +5,8 @@
 #include <cstdlib>
 #include <cstdio>
 
-constexpr int ScreenWidth = 800;
-constexpr int ScreenHeight = 512;
+constexpr int ScreenWidth = 500;
+constexpr int ScreenHeight = 550;
 
 static const char* TemplateVersion = "Template_v2019.08";
 
