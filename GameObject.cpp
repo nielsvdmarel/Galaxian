@@ -1,9 +1,10 @@
 #include "GameObject.h"
 
-GameObject::GameObject() {
-	
-}
+namespace Tmpl8 {
+	GameObject::GameObject(Surface* surface) {
 
-GameObject::~GameObject() {
-	
-}
+	}
+	GameObject::~GameObject() {
+
+	}
+};

@@ -1,12 +1,12 @@
 #pragma once
+#include "surface.h"
 #include <iostream>
 #include <vector>
-#include "surface.h"
-
-class GameObject {
-public:
-	GameObject();
-	
+namespace Tmpl8 {
+	class GameObject {
+	public:
+	GameObject(Surface* surface);
 	~GameObject();
-private:
-};
+	private:
+	};
+}

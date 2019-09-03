@@ -17,7 +17,7 @@ namespace Tmpl8
 	// -----------------------------------------------------------
 	void Game::Shutdown()
 	{
-
+		
 	}
 	static Sprite Background(new Surface("assets/galaxian_assets/BackGroundSheet.png"), 15);
 	static Sprite Player(new Surface("assets/galaxian_assets/shooter.png"), 1);

@@ -12,6 +12,7 @@ class Game
 {
 public:
 	void SetTarget( Surface* surface ) { screen = surface; }
+
 	void Init();
 	void Shutdown();
 	void Tick( float deltaTime );
