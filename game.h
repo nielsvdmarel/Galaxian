@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdio> //printf
+#include "GameObject.h"
 
 namespace Tmpl8 {
 
@@ -23,7 +24,9 @@ public:
 	void KeyDown(int key);
 	void Draw();
 	void Animate();
+	GameObject* player;
 private:
+	float time;
 	Surface* screen;
 	float xpos;
 	float ypos;

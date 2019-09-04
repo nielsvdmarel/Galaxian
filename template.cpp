@@ -345,7 +345,7 @@ int main( int argc, char **argv )
 			firstframe = false;
 		}
 		// calculate frame time and pass it to game->Tick
-		game->Tick( t.elapsed() );
+		game->Tick(t.elapsed());
 		t.reset();
 		// event loop
 		SDL_Event event;

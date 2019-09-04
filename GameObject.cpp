@@ -1,10 +1,24 @@
 #include "GameObject.h"
 
-namespace Tmpl8 {
-	GameObject::GameObject(Surface* surface) {
+	GameObject::GameObject(Surface* surface, int frame, Surface* Rendercanvas) {
+		renderCanvas = Rendercanvas;
+		std::cout << surface << std::endl;
+		objectSurface = surface;
+		objectSprite = new Sprite(surface, frame);
+		
+	}
+	GameObject::~GameObject()
+	{
+	}
+	void GameObject::Update()
+	{
 
 	}
-	GameObject::~GameObject() {
-
+	void GameObject::Render() {
+		objectSprite->Draw(renderCanvas, xPos, yPos);
+		objectSprite->SetFrame(0);
 	}
-};
+	std::string GameObject::GetTag()
+	{
+		return std::string();
+	}
