@@ -1,10 +1,11 @@
 #include "GameObject.h"
 
 	GameObject::GameObject(Surface* surface, int frame, Surface* Rendercanvas) {
-		renderCanvas = Rendercanvas;
-		std::cout << surface << std::endl;
-		objectSurface = surface;
-		objectSprite = new Sprite(surface, frame);
+		m_renderCanvas = Rendercanvas;
+		m_objectSurface = surface;
+		m_objectSprite = new Sprite(surface, frame);
+		width = surface->GetWidth();
+		height = surface->GetHeight();
 		
 	}
 	GameObject::~GameObject()
@@ -15,10 +16,12 @@
 
 	}
 	void GameObject::Render() {
-		objectSprite->Draw(renderCanvas, xPos, yPos);
-		objectSprite->SetFrame(0);
+		m_objectSprite->Draw(m_renderCanvas, m_xPos, m_yPos);
+		m_objectSprite->SetFrame(0);
 	}
-	std::string GameObject::GetTag()
+	void GameObject::onCollision(GameObject* other)
 	{
-		return std::string();
+	}
+	std::string GameObject::GetTag() {
+		return tag;
 	}

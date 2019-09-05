@@ -24,14 +24,19 @@ public:
 	void KeyDown(int key);
 	void Draw();
 	void Animate();
+	void CreateBackground();
+	void HandleBackGround();
 	GameObject* player;
+	Surface* backgroundfit;
+	GameObject* Background[3];
 private:
 	float time;
 	Surface* screen;
 	float xpos;
 	float ypos;
 	float playerMovement;
-	std::vector<Sprite*> allSprites;
+	int offset;
+
 };
 
 }; // namespace Tmpl8

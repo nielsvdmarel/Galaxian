@@ -10,9 +10,17 @@
     <ClCompile Include="game.cpp">
       <Filter>template code</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>template code</Filter>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="surface.h">
@@ -24,13 +32,27 @@
     <ClInclude Include="game.h">
       <Filter>template code</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>template code</Filter>
+    <ClInclude Include="Player.h">
+      <Filter>Headers</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">
       <UniqueIdentifier>{bf32dd6e-4be7-4889-8ac6-49e7ee163c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{935b4b0d-7e14-4d93-bd60-b3bb76ebb490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{df9cbd2c-cbed-4486-808e-938bf53183bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

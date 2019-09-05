@@ -4,13 +4,13 @@
 #include <vector>
 #include <string>
 using namespace Tmpl8;
-	class GameObject {
-	public:
+class GameObject {
+public:
 	GameObject(Surface* surface, int frame, Surface* rendercanvas);
 	~GameObject();
-	void Update();
-	void Render();
-	void onCollision(GameObject* other);
+	virtual void Update();
+	virtual void Render();
+	virtual void onCollision(GameObject* other);
 	std::string GetTag();
 	std::string tag = "GameObject";
 	int m_xPos;
@@ -18,6 +18,8 @@ using namespace Tmpl8;
 	Sprite* m_objectSprite;
 	Surface* m_objectSurface;
 	Surface* m_renderCanvas;
-	private:
-	
-}
+	int width;
+	int height;
+private:
+
+};
