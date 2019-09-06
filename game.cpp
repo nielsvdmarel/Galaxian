@@ -17,12 +17,6 @@ namespace Tmpl8
 	{
 		
 	}
-
-	
-	//static Sprite Background(new Surface("assets/galaxian_assets/BackGroundSheet.png"), 15);
-	//static Sprite Player(new Surface("assets/galaxian_assets/shooter.png"), 1);
-	//Sprite life1(new Surface("assets/galaxian_assets/shooter.png"), 1);
-	//static int frame = 0;
 	
 	void Game::Tick(float deltaTime) {
 		time = deltaTime;
@@ -38,31 +32,33 @@ namespace Tmpl8
 
 	void Game::Draw() {
 		player->Render();
-		//Background.Draw(screen, 0,0); //TODO replace with normal width and height value
-		//Player.Draw(screen, (xpos - Player.GetWidth() / 2), (ypos - Player.GetHeight() / 2)); //TODO replace with normal width and height value
 		for (unsigned int i = 0; i < 3; i++) {
 			Background[i]->Render();
 		}
 	}
 
 	void Game::Animate() {
-		//Player.SetFrame(0);
-		//Background.SetFrame(frame++);
-		//if (frame > 14) {
-		//	frame = 0;
-		//}
-		
+		BackGroundManager();
 	}
 
 	void Game::CreateBackground() {
-		offset = 400;
-		for (unsigned int i = 0; i < 3; i++) {
+		offset = 256;
+		for (unsigned int i = 0; i < 4; i++) {
 			GameObject* background = new GameObject(new Surface("assets/galaxian_assets/BackGroundSheet.png"), 15, screen);
 			Background[i] = background;
 			Background[i]->m_xPos = 0;
 			Background[i]->m_yPos = 0;
 			Background[i]->m_yPos = offset * i;
-			//Background[i]->m_objectSurface->Resize(backgroundfit);
+			Background[i]->maxFrame = 14;
+		}
+	}
+
+	void Game::BackGroundManager() {
+		for (unsigned int i = 0; i < 4; i++) {
+			Background[i]->currentFrame++;
+			if (Background[i]->currentFrame > Background[i]->maxFrame) {
+				Background[i]->currentFrame = 0;
+			}
 		}
 	}
 

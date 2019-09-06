@@ -25,10 +25,11 @@ public:
 	void Draw();
 	void Animate();
 	void CreateBackground();
-	void HandleBackGround();
+	void BackGroundManager();
 	GameObject* player;
 	Surface* backgroundfit;
-	GameObject* Background[3];
+	GameObject* Background[4];
+
 private:
 	float time;
 	Surface* screen;
@@ -36,6 +37,7 @@ private:
 	float ypos;
 	float playerMovement;
 	int offset;
+	float backgroundFrame;
 
 };
 

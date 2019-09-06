@@ -11,6 +11,7 @@ public:
 	virtual void Update();
 	virtual void Render();
 	virtual void onCollision(GameObject* other);
+	void SetMaxFrame(int maxFrameInt);
 	std::string GetTag();
 	std::string tag = "GameObject";
 	int m_xPos;
@@ -20,6 +21,8 @@ public:
 	Surface* m_renderCanvas;
 	int width;
 	int height;
+	int currentFrame = 0;
+	int maxFrame;
 private:
 
 };

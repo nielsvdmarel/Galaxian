@@ -1,5 +1,13 @@
-﻿  game.cpp
-C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(13,42): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(79,36): warning C4244:  '-=': conversion from 'float' to 'int', possible loss of data
-C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(84,36): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
-  tmpl_2019-08.vcxproj -> C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\tmpl_2019-08_debug.exe
+﻿  Enemy.cpp
+  EnemyManager.cpp
+  GameObject.cpp
+  Player.cpp
+  Projectile.cpp
+  game.cpp
+D:\Buas\Galaxian\JaccoTemplate\game.cpp(13,42): warning C4244:  '=': conversion from 'double' to 'int', possible loss of data
+D:\Buas\Galaxian\JaccoTemplate\game.cpp(75,36): warning C4244:  '-=': conversion from 'float' to 'int', possible loss of data
+  surface.cpp
+  template.cpp
+  Generating Code...
+D:\Buas\Galaxian\JaccoTemplate\game.cpp(80,36): warning C4244:  '+=': conversion from 'float' to 'int', possible loss of data
+  tmpl_2019-08.vcxproj -> D:\Buas\Galaxian\JaccoTemplate\tmpl_2019-08_debug.exe

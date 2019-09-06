@@ -17,10 +17,14 @@
 	}
 	void GameObject::Render() {
 		m_objectSprite->Draw(m_renderCanvas, m_xPos, m_yPos);
-		m_objectSprite->SetFrame(0);
+		m_objectSprite->SetFrame(currentFrame);
 	}
 	void GameObject::onCollision(GameObject* other)
 	{
+	}
+	
+	void GameObject::SetMaxFrame(int maxFrameInt) {
+		maxFrame = maxFrameInt;
 	}
 	std::string GameObject::GetTag() {
 		return tag;
