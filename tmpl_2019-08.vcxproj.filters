@@ -19,8 +19,15 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="surface.h">
@@ -41,8 +48,15 @@
     <ClInclude Include="Projectile.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="Background.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="template code">

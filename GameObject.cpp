@@ -11,16 +11,23 @@
 	GameObject::~GameObject()
 	{
 	}
-	void GameObject::Update()
-	{
+	void GameObject::Update(){
 
 	}
+
 	void GameObject::Render() {
 		m_objectSprite->Draw(m_renderCanvas, m_xPos, m_yPos);
 		m_objectSprite->SetFrame(currentFrame);
 	}
-	void GameObject::onCollision(GameObject* other)
-	{
+
+	void GameObject::onCollision(GameObject* other) {
+	}
+
+	void GameObject::Animate() {
+		currentFrame++;
+		if (currentFrame > maxFrame) {
+			currentFrame = 0;
+		}
 	}
 	
 	void GameObject::SetMaxFrame(int maxFrameInt) {

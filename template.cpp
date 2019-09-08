@@ -322,8 +322,7 @@ int main( int argc, char **argv )
 		void* target = 0;
 		int pitch;
 		SDL_LockTexture( frameBuffer, NULL, &target, &pitch );
-		if (pitch == (surface->GetWidth() * 4))
-		{
+		if (pitch == (surface->GetWidth() * 4)) {
 			memcpy( target, surface->GetBuffer(), ScreenWidth * ScreenHeight * 4 );
 		}
 		else

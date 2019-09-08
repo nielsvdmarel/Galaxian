@@ -13,13 +13,13 @@ namespace Tmpl8
 		player->m_yPos = screen->GetHeight()/5 * 4.5;
 	}
 	
-	void Game::Shutdown()
-	{
+	void Game::Shutdown() {
 		
 	}
 	
 	void Game::Tick(float deltaTime) {
 		time = deltaTime;
+		std::cout << time << std::endl;
 		// clear the graphics window
 		screen->Clear(0);
 		// print something in the graphics window
@@ -28,36 +28,50 @@ namespace Tmpl8
 		//printf("this goes to the console window.\n");
 		Draw();
 		Animate();
+		Update();
 	}
 
 	void Game::Draw() {
 		player->Render();
-		for (unsigned int i = 0; i < 3; i++) {
-			Background[i]->Render();
+		for (unsigned int x = 0; x < BackgroundX; x++) {
+			for (unsigned int y = 0; y < BackgroundY; y++) {
+				BackgroundsAll[x][y]->Render();
+			}
 		}
 	}
 
 	void Game::Animate() {
-		BackGroundManager();
-	}
-
-	void Game::CreateBackground() {
-		offset = 256;
-		for (unsigned int i = 0; i < 4; i++) {
-			GameObject* background = new GameObject(new Surface("assets/galaxian_assets/BackGroundSheet.png"), 15, screen);
-			Background[i] = background;
-			Background[i]->m_xPos = 0;
-			Background[i]->m_yPos = 0;
-			Background[i]->m_yPos = offset * i;
-			Background[i]->maxFrame = 14;
+		for (unsigned int x = 0; x < BackgroundX; x++) {
+			for (unsigned int y = 0; y < BackgroundY; y++) {
+				BackgroundsAll[x][y]->Animate();
+			}
 		}
 	}
 
-	void Game::BackGroundManager() {
-		for (unsigned int i = 0; i < 4; i++) {
-			Background[i]->currentFrame++;
-			if (Background[i]->currentFrame > Background[i]->maxFrame) {
-				Background[i]->currentFrame = 0;
+	void Game::CreateBackground() {
+		float startPoint = -512;
+		BackgroundX = 4;
+		BackgroundY = 4;
+		BackgroundOffsetX = 320;
+		BackgroundOffsetY = 256;
+		for (unsigned int x = 0; x < BackgroundX; x++) {
+			for (unsigned int y = 0; y < BackgroundY; y++) {
+				Background* background = new Background(GameObject(new Surface("assets/galaxian_assets/BackGroundSheet.png"), 15, screen));
+				background->m_xPos = 0;
+				background->m_yPos = startPoint;
+				background->SetMaxFrame(14);
+				background->m_xPos += BackgroundOffsetX * x;
+				background->m_yPos += BackgroundOffsetY * y;
+				BackgroundsAll[x][y] = background;	
+			}
+		}
+	}
+
+	void Game::Update() {
+		for (unsigned int x = 0; x < BackgroundX; x++) {
+			for (unsigned int y = 0; y < BackgroundY; y++) {
+				BackgroundsAll[x][y]->Update();
+		
 			}
 		}
 	}

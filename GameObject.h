@@ -11,6 +11,7 @@ public:
 	virtual void Update();
 	virtual void Render();
 	virtual void onCollision(GameObject* other);
+	virtual void Animate();
 	void SetMaxFrame(int maxFrameInt);
 	std::string GetTag();
 	std::string tag = "GameObject";
