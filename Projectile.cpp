@@ -12,10 +12,3 @@ void Projectile::onCollision(GameObject* other)
 {
 }
 
-void Projectile::Udate()
-{
-}
-
-void Projectile::Render()
-{
-}

@@ -8,8 +8,6 @@ public:
 	Projectile(GameObject gameobject);
 	~Projectile();
 	void onCollision(GameObject* other);
-	void Udate();
-	void Render();
 	
 private:
 };

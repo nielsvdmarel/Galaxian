@@ -6,6 +6,7 @@
 #include <cstdio> //printf
 #include "GameObject.h"
 #include "Background.h"
+#include "Player.h"
 
 namespace Tmpl8 {
 
@@ -27,7 +28,7 @@ public:
 	void Animate();
 	void CreateBackground();
 	void BackGroundManager();
-	GameObject* player;
+	Player* player;
 	GameObject* BackgroundsAll[4][4];
 	int BackgroundX, BackgroundY;
 	void Update();
@@ -37,7 +38,6 @@ private:
 	Surface* screen;
 	float xpos;
 	float ypos;
-	float playerMovement;
 	int BackgroundOffsetX;
 	int BackgroundOffsetY;
 	float backgroundFrame;

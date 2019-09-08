@@ -7,8 +7,7 @@ namespace Tmpl8
 	// -----------------------------------------------------------
 	void Game::Init() {
 		CreateBackground();
-		player = new GameObject(new Surface("assets/galaxian_assets/shooter.png"), 1, screen);
-		playerMovement = 4;
+		player = new Player(GameObject(new Surface("assets/galaxian_assets/shooter.png"), 1, screen));
 		player->m_xPos = screen->GetWidth()/2 - player->width;
 		player->m_yPos = screen->GetHeight()/5 * 4.5;
 	}
@@ -19,7 +18,7 @@ namespace Tmpl8
 	
 	void Game::Tick(float deltaTime) {
 		time = deltaTime;
-		std::cout << time << std::endl;
+		//std::cout << time << std::endl;
 		// clear the graphics window
 		screen->Clear(0);
 		// print something in the graphics window
@@ -81,18 +80,19 @@ namespace Tmpl8
 	}
 
 	void Game::KeyDown(int i) {
-		//std::cout << i << std::endl;
+		std::cout << i << std::endl;
 		switch (i) {
 		case 4:
 			std::cout << "A" << std::endl;
-			//xpos -= playerMovement;
-			player->m_xPos -= playerMovement;
+			player->MoveXPos(-player->playerMovement);
 			break;
 		case 7:
 			std::cout << "D" << std::endl;
-			//xpos += playerMovement;
-			player->m_xPos += playerMovement;
+			player->MoveXPos(player->playerMovement);
 			break;
+		case 44:
+			std::cout << "Sapce" << std::endl;
+			player->ShootProjectile();
 		default:
 			break;
 		}

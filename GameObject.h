@@ -15,8 +15,8 @@ public:
 	void SetMaxFrame(int maxFrameInt);
 	std::string GetTag();
 	std::string tag = "GameObject";
-	int m_xPos;
-	int m_yPos;
+	float m_xPos;
+	float m_yPos;
 	Sprite* m_objectSprite;
 	Surface* m_objectSurface;
 	Surface* m_renderCanvas;
