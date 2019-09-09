@@ -4,7 +4,7 @@ Collision::Collision() {
 	for (int i = 0; i < 200; i++) {
 		AllGameObjects[i] = nullptr;
 	}
-	minCheckDistance = 300;
+	minCheckDistance = 50;
 }
 
 Collision::~Collision() {
@@ -14,9 +14,9 @@ Collision::~Collision() {
 void Collision::Update() {
 	for (unsigned int i = 0; i < 200; i++) {
 		if (AllGameObjects[i] != nullptr) {
-			for (unsigned int j = i + 1; j < 20; j++) {
+			for (unsigned int j = i + 1; j < 200; j++) {
 				if (AllGameObjects[j] != nullptr) {
-					if (std::abs(AllGameObjects[i]->m_xPos - AllGameObjects[j]->m_xPos < minCheckDistance)) {
+					if (std::abs(AllGameObjects[i]->m_xPos - AllGameObjects[j]->m_xPos) < minCheckDistance) {
 						int hwi = (AllGameObjects[i]->width / 2);
 						int hwj = (AllGameObjects[j]->width / 2);
 						int hhi = (AllGameObjects[i]->height / 2);
@@ -38,4 +38,5 @@ void Collision::Update() {
 
 void Collision::AddObjectToArray(GameObject* gameObject, int place) {
 	AllGameObjects[place] = gameObject;
+	std::cout << AllGameObjects[place] << std::endl;
 }

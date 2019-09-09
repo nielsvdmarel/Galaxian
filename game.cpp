@@ -1,4 +1,4 @@
-#include "game.h"1111111
+#include "game.h"
 
 namespace Tmpl8
 {
@@ -76,7 +76,6 @@ namespace Tmpl8
 		for (unsigned int x = 0; x < BackgroundX; x++) {
 			for (unsigned int y = 0; y < BackgroundY; y++) {
 				BackgroundsAll[x][y]->Update();
-		
 			}
 		}
 		player->Update();

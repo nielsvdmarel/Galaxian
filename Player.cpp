@@ -5,7 +5,7 @@ Player::Player(Collision* collision, GameObject gameobject): GameObject(gameobje
 	minXPos =  0;
 	maxXpos = m_renderCanvas->GetWidth() - m_objectSprite->GetWidth();
 	IsAbleToShoot = true;
-	currentProjectile = new Projectile(GameObject(new Surface("assets/galaxian_assets/verticalline.png"), 1, m_renderCanvas));
+	currentProjectile = new Projectile(GameObject(new Surface("assets/galaxian_assets/verticalline2.png"), 1, m_renderCanvas));
 	collision->AddObjectToArray(currentProjectile, 1);
 }
 
@@ -27,7 +27,7 @@ void Player::Update() {
 	}
 	if(IsAbleToShoot) {
 		currentProjectile->m_xPos = m_xPos + m_objectSprite->GetWidth() / 2 - currentProjectile->width / 2;
-		currentProjectile->m_yPos = m_yPos - m_objectSprite->GetHeight() / 2 + currentProjectile->height;
+		currentProjectile->m_yPos = m_yPos - currentProjectile->height;
 	}
 }
 
