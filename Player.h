@@ -1,10 +1,12 @@
 #pragma once
 #include "GameObject.h"
 #include "Projectile.h"
+#include "Physics.h"
+
 using namespace Tmpl8;
 class Player : public GameObject {
 public:
-	Player(GameObject gameobject);
+	Player(Collision* collision, GameObject gameobject);
 	~Player();
 	void onCollision(GameObject* other);
 	void Update();
@@ -16,6 +18,7 @@ public:
 	void ShootProjectile();
 	bool IsAbleToShoot;
 	Projectile* currentProjectile;
+	Collision* collision;
 private:
 };
 

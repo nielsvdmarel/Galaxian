@@ -1,8 +1,8 @@
 #pragma once
 #include "surface.h"
 #include <iostream>
-#include <vector>
 #include <string>
+
 using namespace Tmpl8;
 class GameObject {
 public:
@@ -24,6 +24,7 @@ public:
 	int height;
 	int currentFrame = 0;
 	int maxFrame;
+	int midleposx, midleposy;
 private:
 
 };

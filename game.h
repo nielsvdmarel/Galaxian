@@ -7,6 +7,8 @@
 #include "GameObject.h"
 #include "Background.h"
 #include "Player.h"
+#include "EnemyManager.h"
+#include "Physics.h"
 
 namespace Tmpl8 {
 
@@ -32,6 +34,8 @@ public:
 	GameObject* BackgroundsAll[4][4];
 	int BackgroundX, BackgroundY;
 	void Update();
+	EnemyManager* enemyManager;
+	Collision* collission;
 
 private:
 	float time;
@@ -41,7 +45,7 @@ private:
 	int BackgroundOffsetX;
 	int BackgroundOffsetY;
 	float backgroundFrame;
-
+	GameObject* allGameObjects[];
 };
 
 }; // namespace Tmpl8

@@ -21,6 +21,7 @@
 	}
 
 	void GameObject::onCollision(GameObject* other) {
+		
 	}
 
 	void GameObject::Animate() {

@@ -1,4 +1,4 @@
-#include "game.h"
+#include "game.h"1111111
 
 namespace Tmpl8
 {
@@ -6,10 +6,15 @@ namespace Tmpl8
 	// Initialize the application
 	// -----------------------------------------------------------
 	void Game::Init() {
+		collission = new Collision();
+		allGameObjects == collission->AllGameObjects;
 		CreateBackground();
-		player = new Player(GameObject(new Surface("assets/galaxian_assets/shooter.png"), 1, screen));
+		player = new Player(collission ,GameObject(new Surface("assets/galaxian_assets/shooter.png"), 1, screen));
 		player->m_xPos = screen->GetWidth()/2 - player->width;
 		player->m_yPos = screen->GetHeight()/5 * 4.5;
+		collission->AddObjectToArray(player, 0);
+		enemyManager = new EnemyManager(collission ,screen, allGameObjects);
+		enemyManager->InstantiateArmy();
 	}
 	
 	void Game::Shutdown() {
@@ -25,18 +30,19 @@ namespace Tmpl8
 		//screen->Print("hello world", 2, 2, 0xffffff);
 		// print something to the text window
 		//printf("this goes to the console window.\n");
-		Draw();
 		Animate();
 		Update();
+		Draw();
 	}
 
 	void Game::Draw() {
-		player->Render();
 		for (unsigned int x = 0; x < BackgroundX; x++) {
 			for (unsigned int y = 0; y < BackgroundY; y++) {
 				BackgroundsAll[x][y]->Render();
 			}
 		}
+		player->Render();
+		enemyManager->RenderAllEnemies();
 	}
 
 	void Game::Animate() {
@@ -73,6 +79,9 @@ namespace Tmpl8
 		
 			}
 		}
+		player->Update();
+		enemyManager->Update();
+		collission->Update();
 	}
 
 	void Game::KeyUp(int i) {
@@ -80,7 +89,7 @@ namespace Tmpl8
 	}
 
 	void Game::KeyDown(int i) {
-		std::cout << i << std::endl;
+		//std::cout << i << std::endl;
 		switch (i) {
 		case 4:
 			std::cout << "A" << std::endl;

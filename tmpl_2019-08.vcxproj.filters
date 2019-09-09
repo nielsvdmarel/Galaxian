@@ -28,6 +28,9 @@
     <ClCompile Include="EnemyManager.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="surface.h">
@@ -55,6 +58,9 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="EnemyManager.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

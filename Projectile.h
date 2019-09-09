@@ -8,6 +8,7 @@ public:
 	Projectile(GameObject gameobject);
 	~Projectile();
 	void onCollision(GameObject* other);
+	int bulletSpeed;
 	
 private:
 };

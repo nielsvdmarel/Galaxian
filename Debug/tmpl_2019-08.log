@@ -1,3 +1,4 @@
-﻿  Player.cpp
-D:\Buas\Galaxian\JaccoTemplate\Player.cpp(6,39): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-  tmpl_2019-08.vcxproj -> D:\Buas\Galaxian\JaccoTemplate\tmpl_2019-08_debug.exe
+﻿  Enemy.cpp
+  Projectile.cpp
+  Generating Code...
+  tmpl_2019-08.vcxproj -> C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\tmpl_2019-08_debug.exe
