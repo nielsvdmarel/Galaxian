@@ -91,15 +91,15 @@ namespace Tmpl8
 		//std::cout << i << std::endl;
 		switch (i) {
 		case 4:
-			std::cout << "A" << std::endl;
+			//std::cout << "A" << std::endl;
 			player->MoveXPos(-player->playerMovement);
 			break;
 		case 7:
-			std::cout << "D" << std::endl;
+			//std::cout << "D" << std::endl;
 			player->MoveXPos(player->playerMovement);
 			break;
 		case 44:
-			std::cout << "Sapce" << std::endl;
+			//std::cout << "Sapce" << std::endl;
 			player->ShootProjectile();
 		default:
 			break;

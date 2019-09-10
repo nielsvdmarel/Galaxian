@@ -13,10 +13,16 @@ public:
 	~Enemy();
 	void onCollision(GameObject* other);
 	void AttackPlayer();
+	void Update();
+	void Render();
 	void DiveAttack(int playerxPos, int playerYpos);
 	enum EnemyState {Nothing = 0, FindFriends, ARC, Fly, Resseting};
+	int currentEnemyNum;
+	void CreateEnemyBullets(GameObject* allObjects[]);
+	void ShootAtPlayer(int playerPosX, int PlayerPosY);
 private:
 	EnemyState currentEnemyState;
-
+	Projectile* enemyProjectiles[5];
+	int lastUsedBullet;
 };
 

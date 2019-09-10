@@ -15,7 +15,7 @@ public:
 	void RenderAllEnemies();
 	void InstantiateArmy();
 	Surface* m_renderCanvas;
-	Enemy* AllEnemys[41];
+	Enemy* AllEnemys[50];
 	int xFormationPos;
 	int yFormationPos;
 	int xstartPos;

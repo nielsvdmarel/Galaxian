@@ -7,6 +7,10 @@ Player::Player(Collision* collision, GameObject gameobject): GameObject(gameobje
 	IsAbleToShoot = true;
 	currentProjectile = new Projectile(GameObject(new Surface("assets/galaxian_assets/verticalline2.png"), 1, m_renderCanvas));
 	collision->AddObjectToArray(currentProjectile, 1);
+	currentProjectile->enabled = true;
+	currentProjectile->tag = "PlayerProjectile";
+	currentProjectile->PlayerProjectile = true;
+	tag = "Player";
 }
 
 Player::~Player() {
@@ -14,7 +18,7 @@ Player::~Player() {
 }
 
 void Player::onCollision(GameObject* other) {
-
+	
 }
 
 void Player::Update() {

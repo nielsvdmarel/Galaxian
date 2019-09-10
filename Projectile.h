@@ -9,7 +9,9 @@ public:
 	~Projectile();
 	void onCollision(GameObject* other);
 	int bulletSpeed;
-	
+	void Update();
+	bool PlayerProjectile;
+	int currentYvel;
 private:
 };
 

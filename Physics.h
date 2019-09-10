@@ -7,7 +7,7 @@ public:
 	Collision();
 	~Collision();
 	void Update();
-	GameObject* AllGameObjects[200];
+	GameObject* AllGameObjects[450];
 	void AddObjectToArray(GameObject* gameObject, int place);
 private:
 	float minCheckDistance;

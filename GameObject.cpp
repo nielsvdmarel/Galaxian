@@ -6,7 +6,6 @@
 		m_objectSprite = new Sprite(surface, frame);
 		width = surface->GetWidth();
 		height = surface->GetHeight();
-		
 	}
 	GameObject::~GameObject()
 	{

@@ -25,6 +25,7 @@ public:
 	int currentFrame = 0;
 	int maxFrame;
 	int midleposx, midleposy;
+	bool enabled;
 private:
 
 };
