@@ -1,10 +1,6 @@
-#include "game.h"
+	#include "game.h"
 
-namespace Tmpl8
-{
-	// -----------------------------------------------------------
-	// Initialize the application
-	// -----------------------------------------------------------
+namespace Tmpl8 {
 	void Game::Init() {
 		collission = new Collision();
 		allGameObjects == collission->AllGameObjects;
@@ -24,12 +20,7 @@ namespace Tmpl8
 	void Game::Tick(float deltaTime) {
 		time = deltaTime;
 		std::cout << time << std::endl;
-		// clear the graphics window
 		screen->Clear(0);
-		// print something in the graphics window
-		//screen->Print("hello world", 2, 2, 0xffffff);
-		// print something to the text window
-		//printf("this goes to the console window.\n");
 		Animate();
 		Update();
 		Draw();
@@ -92,11 +83,11 @@ namespace Tmpl8
 		switch (i) {
 		case 4:
 			//std::cout << "A" << std::endl;
-			player->MoveXPos(-player->playerMovement * (time/1000) * 500);
+			player->MoveXPos(-player->playerMovement * (time/1000) * 100);
 			break;
 		case 7:
 			//std::cout << "D" << std::endl;
-			player->MoveXPos(player->playerMovement * (time/1000) * 500);
+			player->MoveXPos(player->playerMovement * (time/1000) * 100);
 			break;
 		case 44:
 			//std::cout << "Sapce" << std::endl;

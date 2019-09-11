@@ -16,7 +16,7 @@ public:
 	void Update();
 	void Render();
 	void DiveAttack(int playerxPos, int playerYpos);
-	enum EnemyState {Nothing = 0, FindFriends, ARC, Fly, Resseting};
+	enum EnemyState {Idle = 0, Formation, Attack, GroupAttack, Resseting, die};
 	int currentEnemyNum;
 	void CreateEnemyBullets(GameObject* allObjects[]);
 	void ShootAtPlayer(int playerPosX, int PlayerPosY);

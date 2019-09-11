@@ -1,7 +1,7 @@
 #include "Enemy.h"
 
 Enemy::Enemy(GameObject gameobject): GameObject(gameobject) {
-	currentEnemyState = Nothing;
+	currentEnemyState = Formation;
 	tag = "Enemy";
 	enabled = true;
 	for (unsigned int i = 0; i < 5; i++) {

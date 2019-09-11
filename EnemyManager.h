@@ -29,6 +29,8 @@ public:
 	{4,4,4,4,4,4,4,4,4,4},
 	{4,4,4,4,4,4,4,4,4,4}
 	};
+	float currentGroupMovement;
+	float GroupMovementSpeed;
 private:
 
 };	
