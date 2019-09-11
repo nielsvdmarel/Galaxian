@@ -1,4 +1,17 @@
-﻿  Enemy.cpp
-D:\Buas\Galaxian\JaccoTemplate\Enemy.cpp(47,47): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
-D:\Buas\Galaxian\JaccoTemplate\Enemy.cpp(47,39): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
-  tmpl_2019-08.vcxproj -> D:\Buas\Galaxian\JaccoTemplate\tmpl_2019-08_debug.exe
+﻿  game.cpp
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.h(48,30): warning C4200:  nonstandard extension used: zero-sized array in struct/union
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.h(48,30): message :  This member will be ignored by a defaulted constructor or copy/move assignment operator
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(10,18): warning C4553:  '==': result of expression not used; did you intend '='?
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(13,41): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(14,42): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(39,30): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(40,31): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(49,30): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(50,31): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(62,30): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(63,31): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(76,30): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(77,31): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(95,59): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\game.cpp(99,58): warning C4244:  'argument': conversion from 'float' to 'int', possible loss of data
+  tmpl_2019-08.vcxproj -> C:\Users\niels\Documents\Buas\Galaxian\GalaxianBuas\JaccoTemplate\tmpl_2019-08_debug.exe

@@ -23,7 +23,7 @@ namespace Tmpl8
 	
 	void Game::Tick(float deltaTime) {
 		time = deltaTime;
-		//std::cout << time << std::endl;
+		std::cout << time << std::endl;
 		// clear the graphics window
 		screen->Clear(0);
 		// print something in the graphics window
@@ -92,11 +92,11 @@ namespace Tmpl8
 		switch (i) {
 		case 4:
 			//std::cout << "A" << std::endl;
-			player->MoveXPos(-player->playerMovement);
+			player->MoveXPos(-player->playerMovement * (time/1000) * 500);
 			break;
 		case 7:
 			//std::cout << "D" << std::endl;
-			player->MoveXPos(player->playerMovement);
+			player->MoveXPos(player->playerMovement * (time/1000) * 500);
 			break;
 		case 44:
 			//std::cout << "Sapce" << std::endl;
